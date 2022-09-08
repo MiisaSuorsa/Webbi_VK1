@@ -125,15 +125,43 @@ if (document.readyState !== "loading") {
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
-    buttonFunction();
+    buttonFunction1();
+    buttonFunction2();
   });
 } //Luento videosta esimerkki napin painalluksen toiminnallisuudesta
 
 
-function buttonFunction() {
+function buttonFunction1() {
   var button = document.getElementById("my-button");
   button.addEventListener("click", function () {
     console.log("hello world");
+  });
+} //https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+
+/*function changeText() {
+    document.getElementById("hello").innerHTML = "My notebook";
+}
+*/
+
+
+function buttonFunction2() {
+  var button = document.getElementById("my-button");
+  button.addEventListener("click", function () {
+    console.log("hello world"); //T3
+    //changeText();
+    //document.getElementById("hello").innerHTML = "My notebook";
+
+    var hText = document.getElementById("hello");
+    /*
+    if (hText.innerHTML=="Hello world"){
+        hText.innerHTML = "My notebook";
+    }
+    else{
+        hText.innerHTML = "Hello world";
+    }
+    */
+
+    hText.innerHTML = "kakka";
   });
 }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
