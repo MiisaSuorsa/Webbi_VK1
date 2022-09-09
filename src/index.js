@@ -14,6 +14,7 @@ document.getElementById("app").innerHTML = `
 if(document.readyState !== "loading") {
     console.log("Document is ready!");
     buttonFunction();
+    addToList();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         console.log("Document is ready after waiting!");
