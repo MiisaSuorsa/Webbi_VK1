@@ -41,7 +41,13 @@ function addToList() {
     addButton.addEventListener("click", function() {
         var ul_list = document.getElementById("list");
         var list_item = document.createElement("li");
-        list_item.appendChild(document.createTextNode("random text"));
-        ul_list.appendChild(list_item);
+        const text = document.getElementById("textarea").value;
+        if(text.innerText != null){
+            list_item.appendChild(document.createTextNode(text));
+            ul_list.appendChild(list_item);
+        } else{
+                list_item.appendChild(document.createTextNode("random text"));
+                ul_list.appendChild(list_item);
+        }
     })
 }
