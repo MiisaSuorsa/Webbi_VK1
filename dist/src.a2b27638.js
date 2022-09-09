@@ -204,6 +204,7 @@ if (document.readyState !== "loading") {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
     buttonFunction();
+    addToList();
   });
 } //Luento videosta esimerkki napin painalluksen toiminnallisuudesta
 
@@ -214,6 +215,16 @@ function buttonFunction() {
     console.log("hello world");
     var hText = document.getElementById("hello");
     hText.innerHTML = "My notebook";
+  });
+}
+
+function addToList() {
+  var addButton = document.getElementById("add-data");
+  addButton.addEventListener("click", function () {
+    var ul_list = document.getElementById("list");
+    var list_item = document.createElement("li");
+    list_item.appendChild(document.createTextNode("random text"));
+    ul_list.appendChild(list_item);
   });
 }
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -244,7 +255,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38653" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
