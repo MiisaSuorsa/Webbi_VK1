@@ -200,6 +200,7 @@ document.getElementById("app").innerHTML = "\n<h1>Hello Vanilla!</h1>\n<div>\n  
 if (document.readyState !== "loading") {
   console.log("Document is ready!");
   buttonFunction();
+  addToList();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
@@ -255,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38653" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
