@@ -201,11 +201,13 @@ if (document.readyState !== "loading") {
   console.log("Document is ready!");
   buttonFunction();
   addToList();
+  addTextToList();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
     buttonFunction();
     addToList();
+    addTextToList();
   });
 } //Luento videosta esimerkki napin painalluksen toiminnallisuudesta
 
@@ -223,8 +225,21 @@ function addToList() {
   var addButton = document.getElementById("add-data");
   addButton.addEventListener("click", function () {
     var ul_list = document.getElementById("list");
-    var list_item = document.createElement("li");
+    var list_item = document.createElement("li"); //const text = document.getElementById("textarea").value;
+
     list_item.appendChild(document.createTextNode("random text"));
+    ul_list.appendChild(list_item);
+  });
+}
+
+function addTextToList() {
+  var addButton = document.getElementById("add-data");
+  addButton.addEventListener("click", function () {
+    var ul_list = document.getElementById("list");
+    var list_item = document.createElement("li"); //const text = document.getElementById("textarea").value;
+
+    list_item.innerText = document.getElementById("textarea").value; //list_item.appendChild(document.createTextNode(text));
+
     ul_list.appendChild(list_item);
   });
 }
@@ -256,7 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46503" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45873" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

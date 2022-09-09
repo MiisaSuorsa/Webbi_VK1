@@ -15,11 +15,13 @@ if(document.readyState !== "loading") {
     console.log("Document is ready!");
     buttonFunction();
     addToList();
+    addTextToList();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         console.log("Document is ready after waiting!");
         buttonFunction();
         addToList();
+        addTextToList();
     })
 }
 
@@ -41,7 +43,22 @@ function addToList() {
     addButton.addEventListener("click", function() {
         var ul_list = document.getElementById("list");
         var list_item = document.createElement("li");
+        //const text = document.getElementById("textarea").value;
+
         list_item.appendChild(document.createTextNode("random text"));
+        ul_list.appendChild(list_item);
+    })
+}
+
+function addTextToList() {
+    const addButton = document.getElementById("add-data");
+    
+    addButton.addEventListener("click", function() {
+        var ul_list = document.getElementById("list");
+        let list_item = document.createElement("li");
+        //const text = document.getElementById("textarea").value;
+        list_item.innerText = document.getElementById("textarea").value;
+        //list_item.appendChild(document.createTextNode(text));
         ul_list.appendChild(list_item);
     })
 }
