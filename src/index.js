@@ -15,13 +15,11 @@ if(document.readyState !== "loading") {
     console.log("Document is ready!");
     buttonFunction();
     addToList();
-    //addTextToList();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         console.log("Document is ready after waiting!");
         buttonFunction();
         addToList();
-        //addTextToList();
     })
 }
 
@@ -39,7 +37,7 @@ function buttonFunction() {
 
 function addToList() {
     const addButton = document.getElementById("add-data");
-    
+    //stackoverflow:sta appendChild tekniikalla, mutta unohdin ottaa osoitteen ylös :)
     addButton.addEventListener("click", function() {
         let ul_list = document.getElementById("list");
         let list_item = document.createElement("li");
@@ -60,7 +58,7 @@ function addToList() {
         }*/
     })
 }
-
+/*
 function addTextToList() {
     const addButton = document.getElementById("add-data");
     
@@ -73,3 +71,4 @@ function addTextToList() {
         ul_list.appendChild(list_item);
     })
 }
+*/
