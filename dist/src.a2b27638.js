@@ -201,13 +201,11 @@ if (document.readyState !== "loading") {
   console.log("Document is ready!");
   buttonFunction();
   addToList();
-  addTextToList();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
     buttonFunction();
     addToList();
-    addTextToList();
   });
 } //Luento videosta esimerkki napin painalluksen toiminnallisuudesta
 
@@ -222,27 +220,42 @@ function buttonFunction() {
 }
 
 function addToList() {
-  var addButton = document.getElementById("add-data");
+  var addButton = document.getElementById("add-data"); //stackoverflow:sta appendChild tekniikalla, mutta unohdin ottaa osoitteen ylös :)
+
   addButton.addEventListener("click", function () {
     var ul_list = document.getElementById("list");
-    var list_item = document.createElement("li"); //const text = document.getElementById("textarea").value;
-
+    var list_item = document.createElement("li");
     list_item.appendChild(document.createTextNode("random text"));
     ul_list.appendChild(list_item);
+    /*list_item.innerText = document.getElementById("textarea").value;
+    //const text = document.getElementById("textarea").value;
+    if(Boolean(list_item)){
+        //ul_list.appendChild(list_item);
+        list_item.appendChild(document.createTextNode("random text"));
+        ul_list.appendChild(list_item);
+        console.log("täällä1");
+    } else {
+        //list_item.appendChild(document.createTextNode("random text"));
+        //ul_list.appendChild(list_item);
+        ul_list.appendChild(list_item);
+        console.log("täällä2");
+    }*/
   });
 }
-
+/*
 function addTextToList() {
-  var addButton = document.getElementById("add-data");
-  addButton.addEventListener("click", function () {
-    var ul_list = document.getElementById("list");
-    var list_item = document.createElement("li"); //const text = document.getElementById("textarea").value;
-
-    list_item.innerText = document.getElementById("textarea").value; //list_item.appendChild(document.createTextNode(text));
-
-    ul_list.appendChild(list_item);
-  });
+    const addButton = document.getElementById("add-data");
+    
+    addButton.addEventListener("click", function() {
+        var ul_list = document.getElementById("list");
+        let list_item = document.createElement("li");
+        //const text = document.getElementById("textarea").value;
+        list_item.innerText = document.getElementById("textarea").value;
+        //list_item.appendChild(document.createTextNode(text));
+        ul_list.appendChild(list_item);
+    })
 }
+*/
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
