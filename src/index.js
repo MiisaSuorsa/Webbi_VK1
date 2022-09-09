@@ -15,13 +15,13 @@ if(document.readyState !== "loading") {
     console.log("Document is ready!");
     buttonFunction();
     addToList();
-    addTextToList();
+    //addTextToList();
 } else {
     document.addEventListener("DOMContentLoaded", function() {
         console.log("Document is ready after waiting!");
         buttonFunction();
         addToList();
-        addTextToList();
+        //addTextToList();
     })
 }
 
@@ -41,12 +41,23 @@ function addToList() {
     const addButton = document.getElementById("add-data");
     
     addButton.addEventListener("click", function() {
-        var ul_list = document.getElementById("list");
-        var list_item = document.createElement("li");
-        //const text = document.getElementById("textarea").value;
-
+        let ul_list = document.getElementById("list");
+        let list_item = document.createElement("li");
         list_item.appendChild(document.createTextNode("random text"));
         ul_list.appendChild(list_item);
+        /*list_item.innerText = document.getElementById("textarea").value;
+        //const text = document.getElementById("textarea").value;
+        if(Boolean(list_item)){
+            //ul_list.appendChild(list_item);
+            list_item.appendChild(document.createTextNode("random text"));
+            ul_list.appendChild(list_item);
+            console.log("täällä1");
+        } else {
+            //list_item.appendChild(document.createTextNode("random text"));
+            //ul_list.appendChild(list_item);
+            ul_list.appendChild(list_item);
+            console.log("täällä2");
+        }*/
     })
 }
 
