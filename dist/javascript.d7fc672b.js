@@ -121,12 +121,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // Luentovideosta katsottu esimerkki tähän if else
 if (document.readyState !== "loading") {
   console.log("Document is ready!");
-  buttonFunction();
+  buttonFunction1(); //buttonFunction2();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     console.log("Document is ready after waiting!");
-    buttonFunction1();
-    buttonFunction2();
+    buttonFunction1(); //buttonFunction2();
   });
 } //Luento videosta esimerkki napin painalluksen toiminnallisuudesta
 
@@ -143,27 +142,28 @@ function buttonFunction1() {
 }
 */
 
-
+/*
 function buttonFunction2() {
-  var button = document.getElementById("my-button");
-  button.addEventListener("click", function () {
-    console.log("hello world"); //T3
-    //changeText();
-    //document.getElementById("hello").innerHTML = "My notebook";
+    const button = document.getElementById("my-button");
 
-    var hText = document.getElementById("hello");
-    /*
-    if (hText.innerHTML=="Hello world"){
-        hText.innerHTML = "My notebook";
-    }
-    else{
-        hText.innerHTML = "Hello world";
-    }
-    */
-
-    hText.innerHTML = "kakka";
-  });
-}
+    button.addEventListener("click", function() {
+        console.log("hello world");
+        //T3
+        //changeText();
+        //document.getElementById("hello").innerHTML = "My notebook";
+        const hText = document.getElementById("hello");
+        /*
+        if (hText.innerHTML=="Hello world"){
+            hText.innerHTML = "My notebook";
+        }
+        else{
+            hText.innerHTML = "Hello world";
+        }
+        
+        hText.innerHTML = "kakka";
+        
+    })
+}*/
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -192,7 +192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34137" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44453" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
